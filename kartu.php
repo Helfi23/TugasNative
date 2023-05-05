@@ -3,8 +3,8 @@
     // include_once 'menu.php';
  
 
-    $model = new Produk();
-    $data_produk = $model->dataProduk();
+    $model = new Kartu();
+    $data_kartu = $model->dataKartu();
 
     // foreach($data_produk as $produk) {
     //     echo $produk['kode'] . ' - ' . $produk['nama'] . ' - ' . $produk['harga_jual'] . '<br>';
@@ -35,11 +35,8 @@
                                             <th>Nomor</th>
                                             <th>Kode</th>
                                             <th>Nama</th>
-                                            <th>harga Beli</th>
-                                            <th>Harga Jual</th>
-                                            <th>Stok</th>
-                                            <th>Min Stok</th>
-                                            <th>Jenis Produk Id</th>
+                                            <th>Diskon</th>
+                                            <th>Iuran Bulanan</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
@@ -47,27 +44,21 @@
                                             <th>Nomor</th>
                                             <th>Kode</th>
                                             <th>Nama</th>
-                                            <th>harga Beli</th>
-                                            <th>Harga Jual</th>
-                                            <th>Stok</th>
-                                            <th>Min Stok</th>
-                                            <th>Jenis Produk Id</th>
+                                            <th>Diskon</th>
+                                            <th>Iuran Bulanan</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
                                         <?php
                                             $no =1;
-                                            foreach($data_produk as $produk)
+                                            foreach($data_kartu as $kartu)
                                             {
                                                 ?><tr>
                                                 <th><?= $no ?></th>
-                                                <th><?= $produk['kode']?></th>
-                                                <th><?= $produk['nama']?></th>
-                                                <th><?= $produk['harga_jual']?></th>
-                                                <th><?= $produk['harga_beli']?></th>
-                                                <th><?= $produk['stok']?></th>
-                                                <th><?= $produk['min_stok']?></th>
-                                                <th><?= $produk['jenis_produk_id']?></th>
+                                                <th><?= $kartu['kode']?></th>
+                                                <th><?= $kartu['nama']?></th>
+                                                <th><?= $kartu['diskon']?></th>
+                                                <th><?= $kartu['iuran']?></th>
 
                                             <?php
                                             $no++;  

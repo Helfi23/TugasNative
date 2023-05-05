@@ -3,8 +3,8 @@
     // include_once 'menu.php';
  
 
-    $model = new Produk();
-    $data_produk = $model->dataProduk();
+    $model = new Pelanggan();
+    $data_pelanggan = $model->dataPelanggan();
 
     // foreach($data_produk as $produk) {
     //     echo $produk['kode'] . ' - ' . $produk['nama'] . ' - ' . $produk['harga_jual'] . '<br>';
@@ -33,42 +33,42 @@
                                     <thead>
                                         <tr>
                                             <th>Nomor</th>
-                                            <th>Kode</th>
-                                            <th>Nama</th>
-                                            <th>harga Beli</th>
-                                            <th>Harga Jual</th>
-                                            <th>Stok</th>
-                                            <th>Min Stok</th>
-                                            <th>Jenis Produk Id</th>
+                                            <th>kode</th>
+                                            <th>Nama Pelanggan</th>
+                                            <th>Jenis Kelamin</th>
+                                            <th>Tempat Lahir</th>
+                                            <th>Tanggal Lahir</th>
+                                            <th>Email</th>
+                                            <th>Kartu ID</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
                                             <th>Nomor</th>
-                                            <th>Kode</th>
-                                            <th>Nama</th>
-                                            <th>harga Beli</th>
-                                            <th>Harga Jual</th>
-                                            <th>Stok</th>
-                                            <th>Min Stok</th>
-                                            <th>Jenis Produk Id</th>
+                                            <th>kode</th>
+                                            <th>Nama Pelanggan</th>
+                                            <th>Jenis Kelamin</th>
+                                            <th>Tempat Lahir</th>
+                                            <th>Tanggal Lahir</th>
+                                            <th>Email</th>
+                                            <th>Kartu ID</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
                                         <?php
                                             $no =1;
-                                            foreach($data_produk as $produk)
+                                            foreach($data_pelanggan as $pelanggan)
                                             {
                                                 ?><tr>
                                                 <th><?= $no ?></th>
-                                                <th><?= $produk['kode']?></th>
-                                                <th><?= $produk['nama']?></th>
-                                                <th><?= $produk['harga_jual']?></th>
-                                                <th><?= $produk['harga_beli']?></th>
-                                                <th><?= $produk['stok']?></th>
-                                                <th><?= $produk['min_stok']?></th>
-                                                <th><?= $produk['jenis_produk_id']?></th>
-
+                                                <th><?= $pelanggan['kode']?></th>
+                                                <th><?= $pelanggan['nama']?></th>
+                                                <th><?= $pelanggan['jk']?></th>
+                                                <th><?= $pelanggan['tmp_lahir']?></th>
+                                                <th><?= $pelanggan['tgl_lahir']?></th>
+                                                <th><?= $pelanggan['email']?></th>
+                                                <th><?= $pelanggan['kartu_id']?></th>
+                                                        
                                             <?php
                                             $no++;  
                                             }

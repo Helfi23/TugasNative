@@ -1,5 +1,12 @@
 <?php
     include_once 'top.php';
+    include_once 'connection.php';
+    include_once 'models/Produk.php';
+    include_once 'models/Pelanggan.php';
+    include_once 'models/Pesanan.php';
+    include_once 'models/Kartu.php';
+    // include_once 'models/.php';
+    include_once 'models/jenis_produk.php';
     include_once 'menu.php';
 ?>
 

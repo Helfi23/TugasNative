@@ -3,8 +3,8 @@
     // include_once 'menu.php';
  
 
-    $model = new Produk();
-    $data_produk = $model->dataProduk();
+    $model = new Pesanan();
+    $data_pesanan = $model->dataPesanan();
 
     // foreach($data_produk as $produk) {
     //     echo $produk['kode'] . ' - ' . $produk['nama'] . ' - ' . $produk['harga_jual'] . '<br>';
@@ -33,42 +33,29 @@
                                     <thead>
                                         <tr>
                                             <th>Nomor</th>
-                                            <th>Kode</th>
-                                            <th>Nama</th>
-                                            <th>harga Beli</th>
-                                            <th>Harga Jual</th>
-                                            <th>Stok</th>
-                                            <th>Min Stok</th>
-                                            <th>Jenis Produk Id</th>
+                                            <th>Tanggal Pesan</th>
+                                            <th>Total Pemesanan</th>
+                                            <th>Nomor Pelanggan</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
-                                        <tr>
+                                         <tr>
                                             <th>Nomor</th>
-                                            <th>Kode</th>
-                                            <th>Nama</th>
-                                            <th>harga Beli</th>
-                                            <th>Harga Jual</th>
-                                            <th>Stok</th>
-                                            <th>Min Stok</th>
-                                            <th>Jenis Produk Id</th>
+                                            <th>Tanggal Pesan</th>
+                                            <th>Total Pemesanan</th>
+                                            <th>Nomor Pelanggan</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
                                         <?php
                                             $no =1;
-                                            foreach($data_produk as $produk)
+                                            foreach($data_pesanan as $pesanan)
                                             {
                                                 ?><tr>
                                                 <th><?= $no ?></th>
-                                                <th><?= $produk['kode']?></th>
-                                                <th><?= $produk['nama']?></th>
-                                                <th><?= $produk['harga_jual']?></th>
-                                                <th><?= $produk['harga_beli']?></th>
-                                                <th><?= $produk['stok']?></th>
-                                                <th><?= $produk['min_stok']?></th>
-                                                <th><?= $produk['jenis_produk_id']?></th>
-
+                                                <th><?= $pesanan['tanggal']?></th>
+                                                <th><?= $pesanan['total']?></th>
+                                                <th><?= $pesanan['pelanggan_id']?></th>
                                             <?php
                                             $no++;  
                                             }
