@@ -25,8 +25,9 @@
                         </div>
                         <div class="card mb-4">
                             <div class="card-header">
-                                <i class="fas fa-table me-1"></i>
-                                DataTable Example
+                                <!-- <i class="fas fa-table me-1"></i>
+                                DataTable Example -->
+                                <a href="index.php?url=kartu_form" class="btn btn-primary btn-sm"> Tambah</a>
                             </div>
                             <div class="card-body">
                                 <table id="datatablesSimple">
@@ -37,6 +38,7 @@
                                             <th>Nama</th>
                                             <th>Diskon</th>
                                             <th>Iuran Bulanan</th>
+                                            <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
@@ -46,6 +48,9 @@
                                             <th>Nama</th>
                                             <th>Diskon</th>
                                             <th>Iuran Bulanan</th>
+                                            <th>
+                                                Action
+                                            </th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
@@ -59,6 +64,15 @@
                                                 <th><?= $kartu['nama']?></th>
                                                 <th><?= $kartu['diskon']?></th>
                                                 <th><?= $kartu['iuran']?></th>
+                                                <th>
+                                                <form action="kartu_controller.php" method="POST">
+                                                    <a class="btn btn-info btn-sm" href="index.php?url=kartu_detail&id=<?= $kartu ['id'] ?>">Detail</a>
+                                                    <a class="btn btn-warning btn-sm">Ubah</a>
+                                                    <a class="btn btn-danger btn-sm">Hapus</a>
+
+                                                    <input type="hidden" name="idx" value="<?= $kartu['id']?>">
+                                                </form>
+                                            </th>
 
                                             <?php
                                             $no++;  

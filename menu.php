@@ -16,11 +16,13 @@
                             </a>
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="index.php?url=product">Data Product</a>
-                                    <a class="nav-link" href="index.php?url=jenis_produk">Jenis Produk</a>
-                                    <a class="nav-link" href="index.php?url=pelanggan">Data Pelanggan</a>
-                                    <a class="nav-link" href="index.php?url=pesanan">Data Pesanan</a>
+                                    <a class="nav-link" href="index.php?url=product">Data Produk</a>
+                                    <a class="nav-link" href="index.php?url=jenis_produk">Data Jenis Produk</a>
+                                    <!-- <a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a> -->
+                                     <a class="nav-link" href="index.php?url=pelanggan">Data Pelanggan</a>
                                     <a class="nav-link" href="index.php?url=kartu">Data Kartu</a>
+                                    <a class="nav-link" href="index.php?url=pesanan">Data Pesanan</a>
+                                    <!-- <a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a> -->
                                 </nav>
                             </div>
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
@@ -36,8 +38,8 @@
                                     </a>
                                     <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                                         <nav class="sb-sidenav-menu-nested nav">
-                                            <a class="nav-link" href="./login.php">Login</a>
-                                            <a class="nav-link" href="./register.php">Register</a>
+                                            <a class="nav-link" href="login.html">Login</a>
+                                            <a class="nav-link" href="register.html">Register</a>
                                             <a class="nav-link" href="password.html">Forgot Password</a>
                                         </nav>
                                     </div>
@@ -55,17 +57,13 @@
                                 </nav>
                             </div>
                             <div class="sb-sidenav-menu-heading">Addons</div>
-                            <a class="nav-link" href="index.php?url=about">
+                            <a class="nav-link" href="charts.html">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                                About
+                                Charts
                             </a>
-                            <a class="nav-link" href="index.php?url=contac">
+                            <a class="nav-link" href="tables.html">
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                                Contac
-                            </a>
-                            <a class="nav-link" href="index.php?url=product">
-                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                                Data
+                                Tables
                             </a>
                         </div>
                     </div>
@@ -75,5 +73,3 @@
                     </div>
                 </nav>
             </div>
-            <div id="layoutSidenav_content">
-                <main>

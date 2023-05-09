@@ -1,17 +1,30 @@
 <?php
 class Kartu{
-    private $connection;
+    private $koneksi;
     public function __construct()
     {
         global $dbh;
-        $this->connection = $dbh;
+        $this->koneksi = $dbh;
     }
     public function dataKartu(){
         $sql = "SELECT * FROM kartu";
-        $ps = $this->connection->prepare($sql);
+        $ps = $this->koneksi->prepare($sql);
         $ps->execute();
         $rs = $ps->fetchAll();
         return $rs;
+    }
+    public function getKartu($id){
+     $sql = "SELECT * FROM kartu WHERE kartu.id = ?";
+        $ps = $this->koneksi->prepare($sql);
+        $ps->execute([$id]);
+        $rs = $ps->fetch();
+        return $rs;
+    }
+    public function simpan($data){
+        $sql = "INSERT INTO kartu(kode, nama, diskon, iuran)
+        VALUES (?,?,?,?)";
+        $ps = $this->koneksi->prepare($sql);
+        $ps->execute($data); 
     }
 }
 

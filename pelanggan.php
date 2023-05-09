@@ -1,14 +1,6 @@
 <?php
-    // include_once 'top.php';
-    // include_once 'menu.php';
- 
-
     $model = new Pelanggan();
     $data_pelanggan = $model->dataPelanggan();
-
-    // foreach($data_produk as $produk) {
-    //     echo $produk['kode'] . ' - ' . $produk['nama'] . ' - ' . $produk['harga_jual'] . '<br>';
-    // }
 ?>
 
                    <h1 class="mt-4">Tables</h1>
@@ -25,8 +17,9 @@
                         </div>
                         <div class="card mb-4">
                             <div class="card-header">
-                                <i class="fas fa-table me-1"></i>
-                                DataTable Example
+                                <!-- <i class="fas fa-table me-1"></i>
+                                DataTable Example -->
+                                <a href="index.php?url=pelanggan_form" class="btn btn-primary btn-sm"> Tambah</a>
                             </div>
                             <div class="card-body">
                                 <table id="datatablesSimple">
@@ -40,6 +33,7 @@
                                             <th>Tanggal Lahir</th>
                                             <th>Email</th>
                                             <th>Kartu ID</th>
+                                            <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
@@ -52,6 +46,7 @@
                                             <th>Tanggal Lahir</th>
                                             <th>Email</th>
                                             <th>Kartu ID</th>
+                                            <th>Action</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
@@ -68,6 +63,15 @@
                                                 <th><?= $pelanggan['tgl_lahir']?></th>
                                                 <th><?= $pelanggan['email']?></th>
                                                 <th><?= $pelanggan['kartu_id']?></th>
+                                                <th>
+                                                <form action="pelanggan_controller.php" method="POST">
+                                                    <a class="btn btn-info btn-sm" href="index.php?url=pelanggan_detail&id=<?= $pelanggan ['id'] ?>">Detail</a>
+                                                    <a class="btn btn-warning btn-sm">Ubah</a>
+                                                    <a class="btn btn-danger btn-sm">Hapus</a>
+
+                                                    <input type="hidden" name="idx" value="<?= $pelanggan['id']?>">
+                                                </form>
+                                            </th>
                                                         
                                             <?php
                                             $no++;  

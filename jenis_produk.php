@@ -1,17 +1,16 @@
 <?php
-    // include_once 'top.php';
-    // include_once 'menu.php';
- 
+// include_once 'top.php';
 
-    $model = new jenis_produk();
-    $data_produk = $model->JenisProduk();
+// include_once 'menu.php';
+$model = new JenisProduk();
+$jenis_produk = $model->JenisProduk();
 
-    // foreach($data_produk as $produk) {
-    //     echo $produk['kode'] . ' - ' . $produk['nama'] . ' - ' . $produk['harga_jual'] . '<br>';
-    // }
+// foreach ($data_produk as $row){
+//     print $row['kode'];
+// }
+
 ?>
-
-                   <h1 class="mt-4">Tables</h1>
+                        <h1 class="mt-4">Tables</h1>
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
                             <li class="breadcrumb-item active">Tables</li>
@@ -32,37 +31,44 @@
                                 <table id="datatablesSimple">
                                     <thead>
                                         <tr>
-                                            <th>Nomor</th>
-                                            <th>Kode</th>
+                                            <th>No</th>
+                                            <th>Nama </th>
                                             <th>Keterangan</th>
+                                            
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
-                                            <th>Nomor</th>
-                                            <th>Kode</th>
-                                            <th>Keterangan</th>
+                                            <th>No</th>
+                                            <th>Nama</th>
+                                            <th>Keterangan</th>   
                                         </tr>
                                     </tfoot>
                                     <tbody>
+                                        <!-- hapus dari baris 64 sampai 511 -->
+                                        <!-- dari <tr> ke </tr> -->
                                         <?php
-                                            $no =1;
-                                            foreach($data_produk as $jenis)
-                                            {
-                                                ?><tr>
-                                                <th><?= $no ?></th>
-                                                <th><?= $jenis['nama']?></th>
-                                                <th><?= $jenis['ket']?></th>
+                                        $no = 1;
+                                        foreach($jenis_produk as $row){
 
-                                            <?php
-                                            $no++;  
-                                            }
-                                            ?>
-                                            </tr>
+                                        ?>
+                                        <tr>
+                                            <td><?= $no ?></td>
+                                            <td><?= $row['nama']?></td>
+                                            <td><?= $row['ket']?></td>
+                                           
+                                        </tr>
+                                      <?php
+                                        $no++; 
+                                    } 
+                                        ?>
                                     </tbody>
                                 </table>
                             </div>
-                        </div>
-                        <?php
-    include_once 'buttom.php';
-?>
+
+</div>
+</div>
+
+                <?php
+        // include_once 'bottom.php';
+                ?>
