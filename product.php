@@ -63,25 +63,26 @@ $data_produk = $model->dataProduk();
                                         <!-- dari <tr> ke </tr> -->
                                         <?php
                                         $no = 1;
-                                        foreach($data_produk as $row){
+                                        foreach($data_produk as $produk){
 
                                         ?>
                                         <tr>
                                             <td><?= $no ?></td>
-                                            <td><?= $row['kode']?></td>
-                                            <td><?= $row['nama']?></td>
-                                            <td><?= $row['harga_beli']?></td>
-                                            <td><?= $row['harga_jual']?></td>
-                                            <td><?= $row['stok']?></td>
-                                            <td><?= $row['min_stok']?></td>
-                                            <td><?= $row['jenis_produk_id']?></td>
+                                            <td><?= $produk['kode']?></td>
+                                            <td><?= $produk['nama']?></td>
+                                            <td><?= $produk['harga_beli']?></td>
+                                            <td><?= $produk['harga_jual']?></td>
+                                            <td><?= $produk['stok']?></td>
+                                            <td><?= $produk['min_stok']?></td>
+                                            <td><?= $produk['jenis_produk_id']?></td>
                                             <td>
                                                 <form action="produk_controller.php" method="POST">
-                                                    <a class="btn btn-info btn-sm" href="index.php?url=product_detail&id=<?= $row ['id'] ?>">Detail</a>
-                                                    <a class="btn btn-warning btn-sm">Ubah</a>
-                                                    <a class="btn btn-danger btn-sm">Hapus</a>
+                                                    <a class="btn btn-info btn-sm" href="index.php?url=product_detail&id=<?= $produk ['id'] ?>">Detail</a>
+                                                    <a class="btn btn-warning btn-sm" href="index.php?url=product_form&idedit=<?= $produk['id']?>">Ubah</a>
+                                                    <button class="btn btn-danger btn-sm" type="submit" name="proses"  value="hapus" 
+                                                    onclick="return confirm('Apakah yakin di hapus')">Hapus</button>
 
-                                                    <input type="hidden" name="idx" value="<?= $row['id']?>">
+                                                    <input type="hidden" name="idx" value="<?= $produk['id']?>">
                                                 </form>
                                             </td>
                                         </tr>
@@ -97,5 +98,5 @@ $data_produk = $model->dataProduk();
 </div>
 
                 <?php
-        // include_once 'bottom.php';
+        include_once 'bottom.php';
                 ?>

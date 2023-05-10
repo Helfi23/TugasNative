@@ -63,8 +63,9 @@
                                                 <th>
                                                 <form action="pesanan_controller.php" method="POST">
                                                     <a class="btn btn-info btn-sm" href="index.php?url=pesanan_detail&id=<?= $pesanan ['id'] ?>">Detail</a>
-                                                    <a class="btn btn-warning btn-sm">Ubah</a>
-                                                    <a class="btn btn-danger btn-sm">Hapus</a>
+                                                    <a class="btn btn-warning btn-sm" href="index.php?url=pesanan_form&idedit=<?= $pesanan['id']?>">Ubah</a>
+                                                   <button class="btn btn-danger btn-sm" type="submit" name="proses"  value="hapus" 
+                                                    onclick="return confirm('Apakah yakin di hapus')">Hapus</button>
 
                                                     <input type="hidden" name="idx" value="<?= $pesanan['id']?>">
                                                 </form>
@@ -77,6 +78,7 @@
                                     </tbody>
                                 </table>
                             </div>
+                        </div>
                         </div>
                         <?php
     include_once 'buttom.php';

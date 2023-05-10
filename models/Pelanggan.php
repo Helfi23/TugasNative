@@ -14,7 +14,7 @@ class Pelanggan{
         return $rs;
     }
     public function getPelanggan($id){
-     $sql = "SELECT * FROM pelanggan WHERE pelanggan.id = ?";
+     $sql = "SELECT * FROM pelanggan WHERE id = ?";
         $ps = $this->koneksi->prepare($sql);
         $ps->execute([$id]);
         $rs = $ps->fetch();
@@ -25,6 +25,16 @@ class Pelanggan{
         VALUES (?,?,?,?,?,?,?)";
         $ps = $this->koneksi->prepare($sql);
         $ps->execute($data); 
+    }
+    public function ubah($data){
+    $sql = "UPDATE pelanggan SET kode=?, nama=?, jk=?, tmp_lahir=?,  tgl_lahir=?, email=?, kartu_id=? WHERE id=?";
+    $ps = $this->koneksi->prepare($sql);
+    $ps->execute($data);
+    }
+    public function hapus($id){
+        $sql = "DELETE FROM pelanggan WHERE id=?";
+        $ps = $this->koneksi->prepare($sql);
+        $ps->execute([$id]);
     }
 }
 
