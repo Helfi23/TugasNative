@@ -1,5 +1,6 @@
 <br>
 <?php
+error_reporting(0);
 $obj_kartu = new Kartu();
 $data_kartu = $obj_kartu->dataKartu();
 
