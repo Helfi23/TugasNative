@@ -1,14 +1,6 @@
 <?php
-    // include_once 'top.php';
-    // include_once 'menu.php';
- 
-
     $model = new Kartu();
     $data_kartu = $model->dataKartu();
-
-    // foreach($data_produk as $produk) {
-    //     echo $produk['kode'] . ' - ' . $produk['nama'] . ' - ' . $produk['harga_jual'] . '<br>';
-    // }
 ?>
 
                    <h1 class="mt-4">Tables</h1>
@@ -25,8 +17,6 @@
                         </div>
                         <div class="card mb-4">
                             <div class="card-header">
-                                <!-- <i class="fas fa-table me-1"></i>
-                                DataTable Example -->
                                 <a href="index.php?url=kartu_form" class="btn btn-primary btn-sm"> Tambah</a>
                             </div>
                             <div class="card-body">
@@ -66,7 +56,7 @@
                                                 <th><?= $kartu['iuran']?></th>
                                                 <th>
                                                <form action="kartu_controller.php" method="POST">
-                                                    <a class="btn btn-info btn-sm" href="index.php?url=kartu_detail&id=<?= $kartu ['id'] ?>">Detail</a>
+                                                    <a class="btn btn-info btn-sm" href="index.php?url=kartu_detail&id=<?= $kartu['id'] ?>">Detail</a>
                                                     <a class="btn btn-warning btn-sm" href="index.php?url=kartu_form&idedit=<?= $kartu['id']?>">Ubah</a>
                                                     <button class="btn btn-danger btn-sm" type="submit" name="proses"  value="hapus" 
                                                     onclick="return confirm('Apakah yakin di hapus')">Hapus</button>
