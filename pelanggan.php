@@ -20,7 +20,7 @@
                                 <!-- <i class="fas fa-table me-1"></i>
                                 DataTable Example -->
                                 <!-- membuat tombol mengarahkan ke file produk_form.php -->
-                                <a href="index.php?url=product_form" class="btn btn-primary btn-sm"> Tambah</a>
+                                <a href="index.php?url=pelanggan_form" class="btn btn-primary btn-sm"> Tambah</a>
                             </div>
 
                             <div class="card-body">
